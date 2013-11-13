@@ -663,11 +663,16 @@ class message_label extends rcube_plugin {
 
             $args['blocks']['create_label'] = array('options' => array(), 'name' => Q($this->gettext('label_create')));
             $args['blocks']['list_label'] = array('options' => array(), 'name' => Q($this->gettext('label_title')));
-            $args['blocks']['help_filter'] = array('options' => array(), 'name' => Q($this->gettext('help_filter_caption')));
-            
-            $args['blocks']['help_filter']['options'][0] = array('title' => 
-                sprintf(Q($this->gettext('label_help_filter')), '<a href="?_task=settings&_action=plugin.managesieve" target="_">', '</a>')); 
 
+        /* 
+	* If sieve and managesieve are active and working uncoment this
+	*
+		$args['blocks']['help_filter'] = array('options' => array(), 'name' => Q($this->gettext('help_filter_caption')));
+
+            
+            	$args['blocks']['help_filter']['options'][0] = array('title' => 
+                sprintf(Q($this->gettext('label_help_filter')), '<a href="?_task=settings&_action=plugin.managesieve" target="_">', '</a>')); 
+	*/
             $i = 0;
             $prefs = $this->rc->config->get('message_label', array());
 
